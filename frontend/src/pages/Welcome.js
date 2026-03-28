@@ -213,7 +213,7 @@ function Welcome() {
                 </button>
                 <h4 id="contact">
                     For more enquiries and sponsorship contact us via:
-                    <a href="https://wa.me/+2347033471680><img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" /></a>
+                    <img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" />
                     || <a href="tel:+2347033471680">+2347033471680</a>
                     </h4>
             </div>
