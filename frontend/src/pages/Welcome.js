@@ -7,6 +7,16 @@ function Welcome() {
 
     const currentYear = new Date().getFullYear();
 
+    var count = 0;
+
+    function login() {
+        count++;
+        if (count >= 5) {
+            navigate("/login");
+            count = 0;
+        }
+    }
+    
     return (
         <div>
             <Helmet>
@@ -218,7 +228,7 @@ function Welcome() {
                     </h4>
             </div>
             <div id="footer">
-                <small>&copy; <span id="year">{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
+                <small onClick={login}>&copy; <span id="year">{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
             </div>
         </div>
     );
