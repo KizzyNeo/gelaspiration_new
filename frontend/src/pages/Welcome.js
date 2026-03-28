@@ -5,18 +5,6 @@ import { Helmet } from "react-helmet";
 function Welcome() {
     const navigate = useNavigate();
 
-    function adminPage() {
-        var clickCount = 0;
-
-        clickCount = clickCount + 1;
-
-        if (clickCount >= 5) {
-            alert("Hello");
-            navigate("./register");
-            clickCount = 0;
-        }
-    };
-
     const currentYear = new Date().getFullYear();
 
     return (
@@ -40,7 +28,7 @@ function Welcome() {
                 <img src={require("../assets/2.png")} alt="gelaspiration_logo" id="logo" />
             </div>
             <div id="sbc">
-                <h1 className="center sbc_text">Sing Better Competition (SBC)</h1>
+                <h1 className="center sbc_text">Sing Better Competition (SBC) 7.0</h1>
             </div>
             <div id="about_us">
                 <h2 id="about_header">About SBC</h2>
@@ -225,11 +213,11 @@ function Welcome() {
                 </button>
                 <h4 id="contact">
                     For more enquiries and sponsorship contact us via:
-                    <img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" />
+                    <a href="https://wa.me/+2347033471680><img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" /></>
                     || <a href="tel:+2347033471680">+2347033471680</a>
                     </h4>
             </div>
-            <div id="footer" onClick={adminPage}>
+            <div id="footer">
                 <small>&copy; <span id="year">{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
             </div>
         </div>
