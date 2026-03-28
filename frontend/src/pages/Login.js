@@ -6,7 +6,7 @@ function Login() {
 
     const handleLogin = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/login", form);
+            const res = await axios.post("https://gelaspiration-backend.onrender.com/api/auth/login", form);
             localStorage.setItem("token", res.data.token);
             window.location.href = "/admin";
         } catch {
