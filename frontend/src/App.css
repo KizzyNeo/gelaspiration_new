@@ -114,9 +114,6 @@ table {
     padding: 2%;
     font-size: 1.5vw;
 }
-#about_text {
-    margin-top: -10px;
-}
 #mission {
     /* background-image: url(./assets/mic.jpg); */
     /* background-size: cover; */
@@ -138,9 +135,6 @@ table {
     flex-direction: column;
     border-radius: 15px;
     font-size: 1.5vw;
-}
-#mission_text {
-    margin-top: -10px;
 }
 #vision {
     /* background-image: url(./assets/mic.jpg);
@@ -164,9 +158,6 @@ table {
     border-radius: 15px;
     font-size: 1.5vw;
 }
-#vision_text {
-    margin-top: -10px;
-}
 #why {
     background-image: url(./assets/mic.jpg);
     background-size: cover;
@@ -182,9 +173,6 @@ table {
     border-radius: 15px;
     font-size: 2vw;
     text-shadow: 2px #301364;
-}
-#why_text {
-    margin-top: -20px;
 }
 .point {
     font-weight: bold;
