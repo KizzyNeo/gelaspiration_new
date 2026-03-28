@@ -28,7 +28,7 @@ function Welcome() {
                 <img src={require("../assets/2.png")} alt="gelaspiration_logo" id="logo" />
             </div>
             <div id="sbc">
-                <h1 className="center sbc_text">Sing Better Competition (SBC) 7.0</h1>
+                <h1 className="center sbc_text">Sing Better Competition (SBC) Seven</h1>
             </div>
             <div id="about_us">
                 <h2 id="about_header">About SBC</h2>
