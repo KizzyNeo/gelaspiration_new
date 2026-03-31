@@ -17,7 +17,7 @@ function Admin() {
 
     const fetchContestants = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/contestants");
+            const res = await axios.get("https://gelaspiration-backend.onrender.com/api/contestants");
             setContestants(res.data);
         } catch (err) {
             console.log(err);
@@ -25,7 +25,7 @@ function Admin() {
     };
 
     const deleteContestant = async (id) => {
-        await axios.delete(`http://localhost:5000/api/contestants/${id}`);
+        await axios.delete(`https://gelaspiration-backend.onrender.com/api/contestants/${id}`);
         fetchContestants();
     };
 
@@ -35,7 +35,7 @@ function Admin() {
         <div style={{ padding: "20px" }}>
             <h1 id="dashboard">Admin Dashboard</h1>
             <input placeholder="Search by name..." onChange={(e) => setSearch(e.target.value)} />
-            <button onClick={() => window.open("http://localhost:5000/api/contestants/export")} id="export">Export Excel</button>
+            <button onClick={() => window.open("https://gelaspiration-backend.onrender.com/api/contestants/export")} id="export">Export Excel</button>
             <table border="1" cellPadding="10" style={{ width: "100%" }}>
                 <thead>
                     <tr>
@@ -52,7 +52,7 @@ function Admin() {
                     {filtered.map((c) => (
                         <tr key={c._id}>
                             <td>{c.contestantId}</td>
-                            <td><img src={`http://localhost:5000/uploads/${encodeURIComponent(c.photo)}`}
+                            <td><img src={c.photo}
                             alt="passport" 
                             width="60"
                             height="60"
