@@ -34,11 +34,12 @@ function Welcome() {
                 <meta property="og:url" content="https://gelaspiration.com" />
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
-            <div id="sbc_header">
+            <div className="sbc_header">
                 <img src={require("../assets/2.png")} alt="gelaspiration_logo" id="logo" />
             </div>
             <div id="sbc">
-                <h1 className="center sbc_text">Sing Better Competition (SBC) 7.0</h1>
+                <img src={require("../assets/singer.png")} id="sbc_img" alt="a_female_singer" />
+                <h1 className="sbc_text">Sing Better Competition (SBC) 7.0</h1>
             </div>
             <div id="about_us">
                 <h2 id="about_header">About SBC</h2>
@@ -98,7 +99,11 @@ function Welcome() {
                 </p>
             </div>
             <div id="why">
-                <h3>Why Sing Better Competition (SBC) Stands Out</h3>
+                <div id="note_div">
+                    <h3 id="note_header">Why Sing Better Competition (SBC) Stands Out?</h3>
+                    <img src={require("../assets/note.png")} className="music_notes" alt="music_notes" />
+                </div>
+                <div id="text_container">
                 <p id="why_text">
                     <p><span className="point">Global Reach from Home:</span> Singers can participate in the competition without the need to travel,
                     reaching a worldwide audience while staying in their comfort zones. Confidence Building: We
@@ -122,12 +127,13 @@ function Welcome() {
                     industry.
                     </p>
                 </p>
+                </div>
             </div>
             <div id="winners">
                 <img src={require("../assets/prizes.png")} id="prizes" alt="prizes" />
             </div>
             <div id="stages">
-                <h2>Stages:</h2>
+                <h2 id="stages_header">STAGES</h2>
                 <ul id="stages_list">
                     <li>Auditioning Stage</li>
                     <li>First Stage</li>
@@ -140,13 +146,27 @@ function Welcome() {
                     Register Now
                 </button>
                 </div>
-                <p id="venue">
+                <div id="venue">
                     <img src={require("../assets/location.png")} alt="location_icon" id="location"/>
-                    SBC Official Facebook page, extended streaming on Instagram and Tiktok @GelaVocalClasses
-                </p>
+                    <p>SBC Official Facebook page, extended streaming on Instagram and Tiktok @GelaVocalClasses.</p>
+                </div>
                 <h4 id="note_text">
                     <span id="note">Note: </span> Voting is required at every stage to qualify for the next stage (&#8358;100 per vote).
                 </h4>
+            </div>
+            <div id="vote">
+                <h2>Vote Your Contestant:</h2>
+                <button className="btn-three">
+                    Vote
+                </button>
+                <h4 id="contact">
+                    For more enquiries and sponsorship contact us via:
+                    <img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" onClick={() => {window.location.href="https://wa.me/+2347033471680"}} />
+                    || <a href="tel:+2347033471680">+2347033471680</a>
+                    </h4>
+            </div>
+            <div id="next_container"> 
+                <img src={require("../assets/next.jpg")} id="next" alt="next_winner" />
             </div>
             <div id="prev_winners">
                 <h2 id="prev_text">SBC Previous Winners</h2>
@@ -215,17 +235,6 @@ function Welcome() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="vote">
-                <h2>Vote Your Contestant:</h2>
-                <button className="btn-two">
-                    Vote
-                </button>
-                <h4 id="contact">
-                    For more enquiries and sponsorship contact us via:
-                    <img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" />
-                    || <a href="tel:+2347033471680">+2347033471680</a>
-                    </h4>
             </div>
             <div id="footer">
                 <small onClick={login}>&copy; <span id="year">{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
