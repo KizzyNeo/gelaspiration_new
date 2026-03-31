@@ -33,9 +33,9 @@ function Admin() {
 
     return (
         <div style={{ padding: "20px" }}>
-            <h1>Admin Dashboard</h1>
+            <h1 id="dashboard">Admin Dashboard</h1>
             <input placeholder="Search by name..." onChange={(e) => setSearch(e.target.value)} />
-            <button onClick={() => window.open("http://localhost:5000/api/contestants/export")}>Export Excel</button>
+            <button onClick={() => window.open("http://localhost:5000/api/contestants/export")} id="export">Export Excel</button>
             <table border="1" cellPadding="10" style={{ width: "100%" }}>
                 <thead>
                     <tr>
@@ -66,18 +66,30 @@ function Admin() {
                             <td>{c.gender}</td>
                             <td>{c.location}</td>
                             <td>{c.phone}</td>
-                            <td>
-                                <button onClick={() => {
+                            {/* <td>
+                                <button onClick={async () => {
                                 const newName = prompt("Enter new name", c.name);
-                                axios.put(`http://localhost:5000/api/contestants/${c._id}`, {
-                                    ...c,
-                                    name: newName
-                                }).then(fetchContestants);
-                            }}>
+                                
+                                if (!newName || newName.trim() === "") return;
+
+                                try {
+                                    await axios.put(`http://localhost:5000/api/contestants/${c._id}`, {name: newName},
+                                    {
+                                        headers: {
+                                            Authorization: `Bearer ${localStorage.getItem("token")}`
+                                        }
+                                        }
+                                    );
+
+                                fetchContestants();
+                            } catch (err) {
+                                console.error(err);
+                                alert("Update failed");
+                            }}} className="btn-four">
                                 Edit
                             </button>
-                            </td>
-                            <td><button onClick={() => deleteContestant(c._id)}>Delete</button></td>
+                            </td> */}
+                            <td><button onClick={() => deleteContestant(c._id)} className="btn-four">Delete</button></td>
                         </tr>
                     ))}
                 </tbody>
