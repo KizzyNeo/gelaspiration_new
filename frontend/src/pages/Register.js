@@ -30,9 +30,9 @@ function Register() {
         data.append("photo", formData.photo);
 
         try {
-            const res = await axios.post("https://gelaspiration-backend.onrender.com/api/contestants", data);
+            const res = await axios.post("http://localhost:5000/api/contestants", data);
             console.log(res.data);
-            alert("Registration Successful!");
+            alert("Registration Successful! ID: " + res.data.contestantId);
         } catch (err) {
             console.error(err);
         }
@@ -57,7 +57,8 @@ function Register() {
                             <meta property="og:url" content="https://gelaspiration.com" />
                             <meta name="twitter:card" content="summary_large_image" />
                         </Helmet>
-            <h2 id="reg">Register Contestant</h2>
+            <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
+            <h2 id="reg">Register for SBC 7.0</h2>
             <form onSubmit={handleSubmit} className="form">
                 <input type="text" name="name" placeholder="Full Name" onChange={handleChange} required />
                 <select name="gender" onChange={handleChange} required>
@@ -106,8 +107,9 @@ function Register() {
                     <option value="Zamfara">Zamfara</option>
                 </select>
                 <input type="text" name="phone" placeholder="Phone" onChange={handleChange} required />
-                <input type="file" name="photo" onChange={handleChange} required /><span className="info">(Professional Photo)</span>
-                <button type="submit" className="btn-two">Submit</button>
+                <label for="photo" className="info">Professional Photo:</label>
+                <input type="file" name="photo" id="photo" onChange={handleChange} required />
+                <button type="submit" className="btn-three">Submit</button>
             </form>
             <div className="general_footer">
                 <small>&copy; <span>{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
