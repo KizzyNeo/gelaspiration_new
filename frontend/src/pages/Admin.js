@@ -5,8 +5,41 @@ import { useNavigate } from "react-router-dom";
 function Admin() {
     const [contestants, setContestants] = useState([]);
     const [search, setSearch] = useState("");
-
     const navigate = useNavigate();
+    const currentYear = new Date().getFullYear();
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const overlayStyle = {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        background: "rgba(0, 0, 0, 0.8)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 1000
+    };
+
+    const modalStyle = {
+        background: "#fff",
+        padding: "20px",
+        borderRadius: "10px",
+        maxWidth: "500px",
+        width: "90%",
+        textAlign: "center"
+    };
+
+    const btnStyle = {
+        padding: "10px 15px",
+        border: "none",
+        cursor: "pointer",
+        background: "#333",
+        color: "#fff"
+    };
+
+    // const token = localStorage.getItem("token");
     
     useEffect(() => {
         if (!localStorage.getItem("token")) {
@@ -25,15 +58,27 @@ function Admin() {
     };
     const deleteContestant = async (id) => {
         await axios.delete(`https://api.gelaspiration.com/api/contestants/${id}`);
+        //     {
+        //             headers: {
+        //                 Authorization: `Bearer ${token}`
+        //             }
+        //         }
+        // );
         fetchContestants();
     };
 
     const filtered = contestants.filter(c => c.name.toLowerCase().includes(search.toLowerCase()));
 
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location.href = "/login";
+    };
+
     return (
         <div style={{ padding: "20px" }}>
-    <img src={require("../assets/logo.png")} alt="gelaspiration_logo" id="admin_logo" />
+            <img src={require("../assets/logo.png")} alt="gelaspiration_logo" id="admin_logo" />
             <h1 id="dashboard">Admin Dashboard (SBC)</h1>
+            <button onClick={handleLogout} id="logout_btn">Logout</button>
             <input placeholder="Search by name..." onChange={(e) => setSearch(e.target.value)} id="search" />
             <button onClick={() => window.open("https://api.gelaspiration.com/api/contestants/export")} id="export">Export Excel</button>
             <table border="1" cellPadding="10" style={{ width: "100%" }}>
@@ -56,7 +101,8 @@ function Admin() {
                             alt="passport" 
                             width="60"
                             height="60"
-                            style={{ borderRadius: "50%" }}
+                            style={{ borderRadius: "50%", cursor: "pointer" }}
+                            onClick={() => setSelectedImage(c.photo)}
                             onError={(e) => {
                                 e.target.src = "https://via.placeholder.com/60";
                             }}
@@ -94,6 +140,25 @@ function Admin() {
                     ))}
                 </tbody>
             </table>
+            {selectedImage && (
+                <div style={overlayStyle}>
+                    <div style={modalStyle}>
+                        <img src={selectedImage} style={{ width: "100%", maxHeight: "400px", objectFit: "contain" }} />
+                        <div style={{ marginTop: "10px", display: "flex", gap: "10px" }} >
+                            <a href={selectedImage + "?fl_attachment=true"} target="_blank" rel="noreferrer">
+                            // <a href={selectedImage} downloadtarget="_blank" rel="noreferrer">
+                                <button style={btnStyle}>Download</button>
+                            </a>
+                            <button onClick={() => setSelectedImage(null)} style={btnStyle}>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+            )}
+            <div className="general_footer">
+                <small>&copy; <span>{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
+            </div>
         </div>
     );
 }
