@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 function Welcome() {
     const navigate = useNavigate();
@@ -16,6 +17,47 @@ function Welcome() {
             count = 0;
         }
     }
+
+    useEffect (() => {
+    const elements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    elements.forEach(el => observer.observe(el));
+
+    const elementsX = document.querySelectorAll('.animateX');
+    const observerX = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    elementsX.forEach(el => observerX.observe(el));
+
+    const elementsXL = document.querySelectorAll('.animateXL');
+    const observerXL = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    elementsXL.forEach(el => observerXL.observe(el));
+}, []);
     
     return (
         <div>
@@ -41,7 +83,7 @@ function Welcome() {
                 <img src={require("../assets/singer.png")} id="sbc_img" alt="a_female_singer" />
                 <h1 className="sbc_text">Sing Better Competition (SBC) 7.0</h1>
             </div>
-            <div id="about_us">
+            <div id="about_us" className="animate">
                 <h2 id="about_header">About SBC</h2>
                 <p id="about_text">
                     The Sing Better Competition stands as a celestial
@@ -62,7 +104,7 @@ function Welcome() {
                     production.
                 </p>
             </div>
-            <div id="mission">
+            <div id="mission" className="animate">
                 <h2 id="mission_header">Our Mission</h2>
                 <p id="mission_text">
                     Our mission is to spread the gospel
@@ -79,7 +121,7 @@ function Welcome() {
                     equipped for a successful future.
                 </p>
             </div>
-            <div id="vision">
+            <div id="vision" className="animate">
                 <h2>Vision</h2>
                 <p id="vision_text">
                     We envision becoming Africa's leading
@@ -99,11 +141,11 @@ function Welcome() {
                 </p>
             </div>
             <div id="why">
-                <div id="note_div">
+                <div id="note_div" className="animateXL">
                     <h3 id="note_header">Why Sing Better Competition (SBC) Stands Out?</h3>
                     <img src={require("../assets/note.png")} className="music_notes" alt="music_notes" />
                 </div>
-                <div id="text_container">
+                <div id="text_container" className="animateX">
                 <p id="why_text">
                     <p><span className="point">Global Reach from Home:</span> Singers can participate in the competition without the need to travel,
                     reaching a worldwide audience while staying in their comfort zones. Confidence Building: We
@@ -165,7 +207,7 @@ function Welcome() {
                     || <a href="tel:+2347033471680">+2347033471680</a>
                     </h4>
             </div>
-            <div id="next_container"> 
+            <div id="next_container" className="animateX"> 
                 <img src={require("../assets/next.jpg")} id="next" alt="next_winner" />
             </div>
             <div id="prev_winners">
@@ -175,62 +217,62 @@ function Welcome() {
                     <div className="winner">
                         <h3 className="specific">SBC 6.0</h3>
                         <div>
-                            <img src={require("../assets/One.jpg")} className="image" alt="sbc_winner" />
+                            <img src={require("../assets/One.jpg")} className="image animate" alt="sbc_winner" />
                             <h6 className="tag">Miss. Blessing Onyeka (1st | 250K | Lagos)</h6>
-                            <img src={require("../assets/Two.jpg")} className="image" alt="sbc_runnerup" />
-                            <h6 className="tag">Miss. Isaac Susan (2nd | 120K | Ebonyi)</h6>
-                            <img src={require("../assets/Three.jpg")} className="image" alt="sbc_runnerup" />
-                            <h6 className="tag">Mr. Uche Gideon (3rd | 70K | Imo)</h6>
+                            <img src={require("../assets/Two.jpg")} className="image animate" alt="sbc_runnerup" />
+                            <h6 className="tag">Miss. Susan Isaac (2nd | 120K | Ebonyi)</h6>
+                            <img src={require("../assets/Three.jpg")} className="image animate" alt="sbc_runnerup" />
+                            <h6 className="tag">Mr. Gideon Uche (3rd | 70K | Imo)</h6>
                         </div>
                     </div>
                     <div className="winner">
                         <h3 className="specific">SBC 5.0</h3>
                         <div>
-                            <img src={require("../assets/Flyer1.jpg")} className="image" alt="sbc_winner" />
+                            <img src={require("../assets/Flyer1.jpg")} className="image animate" alt="sbc_winner" />
                             <h6 className="tag">Mr. Praise Godwin (1st | 200K | Abuja)</h6>
-                            <img src={require("../assets/Flyer21.jpg")} className="image" alt="sbc_runnerup" />
-                            <h6 className="tag">Gabriel Abigail (2nd | 100K | Imo)</h6>
-                            <img src={require("../assets/Flyer31.jpg")} className="image" alt="sbc_runnerup" />
+                            <img src={require("../assets/Flyer21.jpg")} className="image animate" alt="sbc_runnerup" />
+                            <h6 className="tag">Miss. Gabriel Abigail (2nd | 100K | Imo)</h6>
+                            <img src={require("../assets/Flyer31.jpg")} className="image animate" alt="sbc_runnerup" />
                             <h6 className="tag">Miss. Glory Tokula (3rd | 50K | Abuja)</h6>
                         </div>
                     </div>
                     <div className="winner">
                         <h3 className="specific">SBC 4.0</h3>
                         <div>
-                            <img src={require("../assets/Flyer11.jpg")} className="image" alt="sbc_winner" />
+                            <img src={require("../assets/Flyer11.jpg")} className="image animate" alt="sbc_winner" />
                             <h6 className="tag">Miss. Kenechukwu Onah (1st | 150K | Enugu)</h6>
-                            <img src={require("../assets/Flyer2.jpg")} className="image" alt="sbc_runnerup" />
-                            <h6 className="tag">Mr. Praise Eto (2nd | 70K | Imo)</h6>
-                            <img src={require("../assets/Flyer3.jpg")} className="image" alt="sbc_runnerup" />
+                            <img src={require("../assets/Flyer2.jpg")} className="image animate" alt="sbc_runnerup" />
+                            <h6 className="tag">Miss. Praise Chiamaka (2nd | 70K | Imo)</h6>
+                            <img src={require("../assets/Flyer3.jpg")} className="image animate" alt="sbc_runnerup" />
                             <h6 className="tag">Miss. Juliet Mehara (3rd | 30K | Lagos)</h6>
                         </div>
                     </div>
                     <div className="winner">
                         <h3 className="specific">SBC 3.0</h3>
                         <div>
-                            <img src={require("../assets/SBC3.jpg")} className="image" alt="sbc_winner" />
+                            <img src={require("../assets/SBC3.jpg")} className="image animate" alt="sbc_winner" />
                             <h6 className="tag">Mr. Tobias Prince (1st | 100K | Delta)</h6>
-                            <img src={require("../assets/NKIRUKA.jpg")} className="image" alt="sbc_runnerup" />
+                            <img src={require("../assets/NKIRUKA.jpg")} className="image animate" alt="sbc_runnerup" />
                             <h6 className="tag">Miss. Nkiruka Uragwu (2nd | 20K | Ebonyi)</h6>
-                            <img src={require("../assets/MIRACLE.jpg")} className="image" alt="sbc_runnerup" />
+                            <img src={require("../assets/MIRACLE.jpg")} className="image animate" alt="sbc_runnerup" />
                             <h6 className="tag">Miss. Miracle Nwachukwu (3rd | 10K | Enugu)</h6>
                         </div>
                     </div>
                     <div className="winner">
                         <h3 className="specific">SBC 2.0</h3>
                         <div>
-                            <img src={require("../assets/SBC2.jpg")} className="image" alt="sbc_winner" />
+                            <img src={require("../assets/SBC2.jpg")} className="image animate" alt="sbc_winner" />
                             <h6 className="tag">Miss. Mercy Ezechukwu (1st | 20K | Lagos)</h6>
-                            <img src={require("../assets/IYIDA.jpg")} className="image" alt="sbc_runnerup" />
+                            <img src={require("../assets/IYIDA.jpg")} className="image animate" alt="sbc_runnerup" />
                             <h6 className="tag">Miss. Favour Iyida (2nd | 10K | Enugu)</h6>
                         </div>
                     </div>
                     <div className="winner">
                         <h3 className="specific">SBC 1.0</h3>
                         <div>
-                            <img src={require("../assets/WINNER.jpg")} className="image" alt="sbc_winner" />
+                            <img src={require("../assets/WINNER.jpg")} className="image animate" alt="sbc_winner" />
                             <h6 className="tag">Miss. Esther Uchenna (1st | 10K | Lagos)</h6>
-                            <img src={require("../assets/FAVOUR.jpg")} className="image" alt="sbc_runnerup" />
+                            <img src={require("../assets/FAVOUR.jpg")} className="image animate" alt="sbc_runnerup" />
                             <h6 className="tag">Miss. Favour Iyida (2nd | 5K | Enugu)</h6>
                         </div>
                     </div>
