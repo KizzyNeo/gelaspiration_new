@@ -17,11 +17,11 @@ function Login() {
     };
 
     return (
-        <div className="center arrange form" id="login_form">
+        <div id="login_form">
             <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
             <h2 id="login">Admin Login</h2>
-            <input placeholder="Username" onChange={e => setForm({...form, username: e.target.value})} />
-            <input type="password" placeholder="Password" onChange={e => setForm({...form, password: e.target.value})} />
+            <input placeholder="Username" onChange={e => setForm({...form, username: e.target.value})} className="login_input" />
+            <input type="password" placeholder="Password" onChange={e => setForm({...form, password: e.target.value})} className="login_input" />
             <button className="btn-three" onClick={handleLogin}>Login</button>
             <div className="general_footer">
                 <small>&copy; <span>{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
