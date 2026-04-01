@@ -143,11 +143,11 @@ function Admin() {
             {selectedImage && (
                 <div style={overlayStyle}>
                     <div style={modalStyle}>
-                        <img src={selectedImage} style={{ width: "100%", maxHeight: "400px", objectFit: "contain" }} />
+                        <img src={selectedImage} style={{ width: "100%", maxHeight: "400px", objectFit: "contain" }} alt="contestant_image" />
                         <div style={{ marginTop: "10px", display: "flex", gap: "10px" }} >
-                            // <a href={selectedImage + "?fl_attachment=true"} target="_blank" rel="noreferrer">
-                            //     <button style={btnStyle}>Download</button>
-                            // </a>
+<a href={selectedImage + "?fl_attachment=true"} target="_blank" rel="noreferrer">
+                                 <button style={btnStyle}>Download</button>
+                            </a>
                             <button onClick={() => setSelectedImage(null)} style={btnStyle}>
                                 Close
                             </button>
