@@ -146,7 +146,6 @@ function Admin() {
                         <img src={selectedImage} style={{ width: "100%", maxHeight: "400px", objectFit: "contain" }} />
                         <div style={{ marginTop: "10px", display: "flex", gap: "10px" }} >
                             <a href={selectedImage + "?fl_attachment=true"} target="_blank" rel="noreferrer">
-                            // <a href={selectedImage} downloadtarget="_blank" rel="noreferrer">
                                 <button style={btnStyle}>Download</button>
                             </a>
                             <button onClick={() => setSelectedImage(null)} style={btnStyle}>
