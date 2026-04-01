@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const upload = require("../middleware/upload");
 const cloudinary = require("../config/cloudinary");
-// const multer = require("multer");
 const Contestant = require("../models/Contestant");
+const XLSX = require("xlsx");
 
 const bufferToDataURI = (file) => {
     return `data:${file.mimetype};base64,${file.buffer.toString("base64")}`;
