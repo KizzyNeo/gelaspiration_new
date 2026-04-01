@@ -7,7 +7,7 @@ function Admin() {
     const [search, setSearch] = useState("");
 
     const navigate = useNavigate();
-
+    
     useEffect(() => {
         if (!localStorage.getItem("token")) {
             navigate("/login");
@@ -15,17 +15,16 @@ function Admin() {
         fetchContestants();
     }, [navigate]);
 
-    const fetchContestants = async () => {
+        const fetchContestants = async () => {
         try {
-            const res = await axios.get("https://gelaspiration-backend.onrender.com/api/contestants");
+            const res = await axios.get("https://api.gelaspiration.com/api/contestants");
             setContestants(res.data);
         } catch (err) {
             console.log(err);
         }
     };
-
     const deleteContestant = async (id) => {
-        await axios.delete(`https://gelaspiration-backend.onrender.com/api/contestants/${id}`);
+        await axios.delete(`https://api.gelaspiration.com/api/contestants/${id}`);
         fetchContestants();
     };
 
@@ -34,8 +33,8 @@ function Admin() {
     return (
         <div style={{ padding: "20px" }}>
             <h1 id="dashboard">Admin Dashboard</h1>
-            <input placeholder="Search by name..." onChange={(e) => setSearch(e.target.value)} />
-            <button onClick={() => window.open("https://gelaspiration-backend.onrender.com/api/contestants/export")} id="export">Export Excel</button>
+            <input placeholder="Search by name..." onChange={(e) => setSearch(e.target.value)} id="search" />
+            <button onClick={() => window.open("https://api.gelaspiration.com/api/contestants/export")} id="export">Export Excel</button>
             <table border="1" cellPadding="10" style={{ width: "100%" }}>
                 <thead>
                     <tr>
