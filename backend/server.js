@@ -9,7 +9,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://gelaspiration.com",
+  origin: ["https://gelaspirationnew.vercel.app",
+  "https://sbc.gelaspiration.com"
+           ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json());
