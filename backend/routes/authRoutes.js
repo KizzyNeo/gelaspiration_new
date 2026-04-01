@@ -1,21 +1,29 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 const ADMIN = {
     username: "admin",
-    password: "1234"
+    password: "$2b$10$vplBgGgL60MSN3D6fXXdae0vXfadsCH9Mec08AdocC5AAqborjeJu"
 };
 
-router.post("/login", (req, res) => {
+router.post("/login", async (req, res) => {
     const { username, password } = req.body;
 
-    if (username === ADMIN.username && password === ADMIN.password) {
-        const token = jwt.sign({ username }, "secretkey", { expiresIn: "1d" });
-        return res.json({ token });
+    if (username !== ADMIN.username) {
+        return res.status(401).json({ message: "Invalid username" });
     }
 
-    res.status(401).json({ message: "Invalid credentials" });
+    const isMatch = await bcrypt.compare(password, ADMIN.password);
+
+    if (!isMatch) {
+        return res.status(401).json({ message: "Invalid password" });
+    }
+
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: "1d" });
+
+    res.json({ token });
 });
 
 module.exports = router;
