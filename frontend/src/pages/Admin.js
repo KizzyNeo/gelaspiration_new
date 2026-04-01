@@ -32,7 +32,8 @@ function Admin() {
 
     return (
         <div style={{ padding: "20px" }}>
-            <h1 id="dashboard">Admin Dashboard</h1>
+    <img src={require("../assets/logo.png")} alt="gelaspiration_logo" id="admin_logo" />
+            <h1 id="dashboard">Admin Dashboard (SBC)</h1>
             <input placeholder="Search by name..." onChange={(e) => setSearch(e.target.value)} id="search" />
             <button onClick={() => window.open("https://api.gelaspiration.com/api/contestants/export")} id="export">Export Excel</button>
             <table border="1" cellPadding="10" style={{ width: "100%" }}>
