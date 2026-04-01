@@ -9,6 +9,7 @@ const ADMIN = {
 };
 
 router.post("/login", async (req, res) => {
+    try {
     const { username, password } = req.body;
 
     if (username !== ADMIN.username) {
@@ -24,6 +25,11 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: "1d" });
 
     res.json({ token });
+
+    } catch (err) {
+        console.log("LOGIN ERROR:", err);
+        res.status(500).json({ message: "Server error" });
+    }
 });
 
 module.exports = router;
