@@ -11,6 +11,8 @@ function Register() {
         photo: null
     });
 
+    const [loading, setLoading] = useState(false);
+    
     const handleChange = (e) => {
         if (e.target.name === "photo") {
             setFormData({ ...formData, photo: e.target.files[0] });
@@ -21,6 +23,8 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        setLoading(true);
 
         const data = new FormData();
         data.append("name", formData.name);
@@ -35,13 +39,16 @@ function Register() {
             alert("Registration Successful!");
         } catch (err) {
             console.error(err);
+            alert("Registration failed. Please try again.");
+        } finally {
+            setLoading(false);
         }
     };
 
     const currentYear = new Date().getFullYear();
 
     return (
-        <div className="center arrange">
+        <div className="order">
             <Helmet>
                             <meta charset="utf-8" />
                             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -107,9 +114,14 @@ function Register() {
                     <option value="Zamfara">Zamfara</option>
                 </select>
                 <input type="text" name="phone" placeholder="Phone" onChange={handleChange} required />
-                <label for="photo" className="info">Professional Photo:</label>
+                <label className="info">Professional Photo:</label>
                 <input type="file" name="photo" id="photo" onChange={handleChange} required />
-                <button type="submit" className="btn-three">Submit</button>
+                <button type="submit" className="btn-three" disabled={loading} style={{ display: "flex" }}>{loading ? (
+                    <>
+                    Registering...<div className="spinnerStyle"></div>
+                    </>
+                ) : ( "Submit" )}
+                </button>
             </form>
             <div className="general_footer">
                 <small>&copy; <span>{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
