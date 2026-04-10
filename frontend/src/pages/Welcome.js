@@ -18,6 +18,8 @@ function Welcome() {
         }
     }
 
+    const info = alert("Starting Soon...");
+
     useEffect (() => {
     const elements = document.querySelectorAll('.animate');
     const observer = new IntersectionObserver((entries) => {
@@ -146,7 +148,7 @@ function Welcome() {
                     <img src={require("../assets/note.png")} className="music_notes" alt="music_notes" />
                 </div>
                 <div id="text_container" className="animateX">
-                <p id="why_text">
+                <div id="why_text">
                     <p><span className="point">Global Reach from Home:</span> Singers can participate in the competition without the need to travel,
                     reaching a worldwide audience while staying in their comfort zones. Confidence Building: We
                     focus on helping young artists conquer stage fright and gain the confidence they need to perform
@@ -168,7 +170,7 @@ function Welcome() {
                     artists with the resources, skills, and opportunities to succeed and make their mark in the music
                     industry.
                     </p>
-                </p>
+                </div>
                 </div>
             </div>
             <div id="winners">
@@ -184,7 +186,7 @@ function Welcome() {
                 </ul>
                 <h3 id="reg_fee">Registration Fee: &#8358;3,000</h3>
                 <div className="centralize">
-                    <button className="btn-two" onClick={() => navigate("/register")}>
+                    <button className="btn-two" onClick={info}>
                     Register Now
                 </button>
                 </div>
@@ -198,7 +200,7 @@ function Welcome() {
             </div>
             <div id="vote">
                 <h2>Vote Your Contestant:</h2>
-                <button className="btn-three">
+                <button className="btn-three" onClick={info}>
                     Vote
                 </button>
                 <h4 id="contact">
