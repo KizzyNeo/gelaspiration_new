@@ -18,8 +18,6 @@ function Welcome() {
         }
     }
 
-    const info = alert("Starting Soon...");
-
     useEffect (() => {
     const elements = document.querySelectorAll('.animate');
     const observer = new IntersectionObserver((entries) => {
@@ -186,7 +184,7 @@ function Welcome() {
                 </ul>
                 <h3 id="reg_fee">Registration Fee: &#8358;3,000</h3>
                 <div className="centralize">
-                    <button className="btn-two" onClick={info}>
+                    <button className="btn-two" onClick={() => alert("Starting Soon...")}>
                     Register Now
                 </button>
                 </div>
@@ -200,7 +198,7 @@ function Welcome() {
             </div>
             <div id="vote">
                 <h2>Vote Your Contestant:</h2>
-                <button className="btn-three" onClick={info}>
+                <button className="btn-three" onClick={() => alert("Starting Soon...")}>
                     Vote
                 </button>
                 <h4 id="contact">
