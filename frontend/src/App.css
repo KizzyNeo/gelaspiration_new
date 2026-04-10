@@ -619,6 +619,13 @@ input, select {
     font-weight: 600;
     border-radius: 5px;
 }
+#footer {
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1vw;
+    margin-bottom: 10px;
+}
 .general_footer {
     color: black;
     margin-top: 30px;
