@@ -52,7 +52,7 @@ function Register() {
             <Helmet>
                             <meta charset="utf-8" />
                             <meta name="viewport" content="width=device-width, initial-scale=1" />
-                            <title>Register | SBC 7.0</title>
+                            <title>Register | SBC</title>
                             <meta name="description" content="Register for Sing Better Competition (SBC) 7.0. A super competition for 
                             amazing talents." />
                             <meta name="keywords" content="register, join, sing, competition, sbc, music, talent, nigeria" />
