@@ -226,6 +226,27 @@ table {
     width: 100%;
     height: auto;
 }
+#pros {
+    width: 100%;
+    background-color: #451610;
+    color: white;
+    font-size: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    margin-top: 2%;
+}
+#pros_header {
+    text-align: center;
+    font-size: 4vw;
+    color: #FECD44;
+}
+.details {
+    list-style-type: square;
+}
+.space {
+    margin-bottom: 2%;
+}
 .btn-two {
     background-color: #FECD44;
     color: #451610;
@@ -424,6 +445,12 @@ table {
     height: 4vw;
     margin: -1vw 1vw 0 1vw;
 }
+#whatsapp2 {
+    width: 4vw;
+    height: 4vw;
+    margin: 0 1vw 0 1vw;
+    position: absolute;
+}
 a {
     text-decoration: none;
     color: #451610;
@@ -519,6 +546,13 @@ td img {
     height: 2vw;
     animation: spin 1s linear infinite;
     margin-left: 1vw;
+}
+#instruction {
+    background-color: white;
+    color: #451610;
+    font-size: 3vw;
+    padding: 1vw;
+    font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -650,5 +684,17 @@ input, select {
     height: 1vw;
     animation: spin 1s linear infinite;
     margin-left: 0.5vw;
+}
+#instruction {
+    background-color: white;
+    color: #451610;
+    font-size: 2vw;
+    padding: 1vw;
+    font-weight: 600;
+}
+#whatsapp2 {
+    width: 3vw;
+    height: 3vw;
+    margin: 0 1vw 0 1vw;
 }
 }
