@@ -554,6 +554,10 @@ td img {
     padding: 1vw;
     font-weight: 600;
 }
+#info2 {
+    text-align: left;
+    color: #aa0000;
+}
 
 @media (min-width: 768px) {
     #prev {
@@ -691,6 +695,7 @@ input, select {
     font-size: 2vw;
     padding: 1vw;
     font-weight: 600;
+    border: 3px solid #451610;
 }
 #whatsapp2 {
     width: 3vw;
