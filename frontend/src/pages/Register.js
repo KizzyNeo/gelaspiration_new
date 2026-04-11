@@ -67,7 +67,7 @@ function Register() {
                         </Helmet>
             <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
             <div id="instruction">
-                <h3>Please Note:</h3>
+                <h3 id="info2">Please Note:</h3>
                 <p>
                     Before you register, please ensure to send the sum of &#8358;3,000 only to:<br />
                     Account Number: 6118248880<br />
