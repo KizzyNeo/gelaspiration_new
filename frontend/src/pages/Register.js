@@ -67,13 +67,13 @@ function Register() {
                         </Helmet>
             <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
             <div id="instruction">
-                <h3 id="info2">Please Note:</h3>
+                <h3 id="info2">Note:</h3>
                 <p>
-                    Before you register, please ensure to send the sum of &#8358;3,000 only to:<br />
+                    Before you fill in your details, ensure to send the sum of &#8358;3,000 only to:<br />
                     Account Number: 6118248880<br />
                     Bank: Opay<br />
                     Account Name: Angela Chiamaka Emejuru<br /><br />
-                    Upload your payment receipt to us via WhatsApp <img src={require("../assets/whatsapp.png")} id="whatsapp2" alt="whatsapp_icon" onClick={() => {window.location.href="https://wa.me/+2348123407932"}} />
+                    Send your payment receipt to us on WhatsApp <img src={require("../assets/whatsapp.png")} id="whatsapp2" alt="whatsapp_icon" onClick={() => {window.location.href="https://wa.me/+2348123407932"}} />
                 </p>
             </div>
             <h2 id="reg">Register for SBC 7.0</h2>
