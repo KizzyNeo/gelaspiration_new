@@ -88,9 +88,9 @@ function Welcome() {
                 <p id="about_text">
                     The Sing Better Competition stands as a celestial
                     melody in the realm of virtual gospel music contests.
-                    Hosted by the esteemed Gela Vocal Conservatory and
-                    propelled by the enchanting essence of Gelaspiration 
-                    Enterprise, this competition embodies a noble mission
+                    Powered and organised by Gelaspiration Enterprise
+                    propelled by the enchanting essence of Gelaspiration
+                    , this competition embodies a noble mission
                     to illuminate gospel music through harmonious
                     expressions. Within this ethereal gathering, emerging
                     talents are nurtured akin to delicate blossoms in a 
@@ -161,10 +161,9 @@ function Welcome() {
                     be rewarded with financial prizes, record deals, and long-term career support.
                     </p>
                     <p>
-                        <span className="point">Powered by Gela Vocal Conservatory & Gelaspiration Enterprise:</span> The Sing Better Competition is a
-                    collaboration between Gela Vocal Conservatory, known for its excellence in vocal training and
-                    artist development, and Gelaspiration Enterprise, a brand that promotes creativity, innovation, and
-                    aspiration in the gospel music space. Together, they are committed to providing young gospel
+                        <span className="point">Powered and Organised by Gelaspiration Enterprise:</span> The Sing Better Competition is a competition organised by
+                    Gelaspiration Enterprise, a brand that promotes creativity, innovation, and
+                    aspiration in the gospel music space. It is committed to providing young gospel
                     artists with the resources, skills, and opportunities to succeed and make their mark in the music
                     industry.
                     </p>
@@ -184,27 +183,50 @@ function Welcome() {
                 </ul>
                 <h3 id="reg_fee">Registration Fee: &#8358;3,000</h3>
                 <div className="centralize">
-                    <button className="btn-two" onClick={() => alert("Starting Soon...")}>
+                    <button className="btn-two" onClick={() => navigate("/register")}>
+                    {/* <button className="btn-two" onClick={() => alert("Starting Soon...")}> */}
                     Register Now
                 </button>
                 </div>
                 <div id="venue">
                     <img src={require("../assets/location.png")} alt="location_icon" id="location"/>
-                    <p>SBC Official Facebook page, extended streaming on Instagram and Tiktok @GelaVocalClasses.</p>
+                    <p>SBC Official Facebook page, extended streaming on YouTube, Instagram and Tiktok @Sing Better Competition.</p>
                 </div>
                 <h4 id="note_text">
                     <span id="note">Note: </span> Voting is required at every stage to qualify for the next stage (&#8358;100 per vote).
                 </h4>
             </div>
+            <div id="pros">
+                <h2 id="pros_header">What SBC Holds for Participants</h2>
+                <h5>One Week of Intensive Training On:</h5>
+                <ul className="details">
+                    <li>Audio Recording/Editing</li>
+                    <li>Video Recording/Editing</li>
+                    <li>Voice Training Session</li>
+                </ul>
+                <h4>Bonuses for Participants:</h4>
+                <ul className="details">
+                    <li>Personalised Flyers Throughout the Stages</li>
+                    <li>Certification for All Participants from Stage One to the Final</li>
+                    <li>Free Access to Vocal Courses from the Brand to All Finalists</li>
+                    <li>A Chance to Work with Gelaspiration Enterprise (for the Winners)</li>
+                </ul>
+                <div className="centralize space">
+                    <button className="btn-two" onClick={() => navigate("/register")}>
+                    {/* <button className="btn-two" onClick={() => alert("Starting Soon...")}> */}
+                    Register Now
+                </button>
+                </div>
+            </div>
             <div id="vote">
-                <h2>Vote Your Contestant:</h2>
+                <h2>Vote Your Favourite Contestant:</h2>
                 <button className="btn-three" onClick={() => alert("Starting Soon...")}>
                     Vote
                 </button>
                 <h4 id="contact">
                     For more enquiries and sponsorship contact us via:
-                    <img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" onClick={() => {window.location.href="https://wa.me/+2347033471680"}} />
-                    || <a href="tel:+2347033471680">+2347033471680</a>
+                    <img src={require("../assets/whatsapp.png")} id="whatsapp" alt="whatsapp_icon" onClick={() => {window.location.href="https://wa.me/+2348123407932"}} />
+                    || <a href="tel:+2348123407932">+2348123407932</a>
                     </h4>
             </div>
             <div id="next_container" className="animateX"> 
