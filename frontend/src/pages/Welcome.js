@@ -64,12 +64,12 @@ function Welcome() {
             <Helmet>
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>SBC 7.0 | Gelaspiration</title>
-                <meta name="description" content="Sing Better Competition (SBC) 7.0. A super competition for 
+                <title>SBC | Gelaspiration</title>
+                <meta name="description" content="Sing Better Competition (SBC). A super competition for 
                 amazing talents." />
                 <meta name="keywords" content="sing, competition, sbc, music, talent, nigeria" />
                 <meta name="author" content="Gelaspiration" />
-                <meta property="og:title" content="Sing Better Competition (SBC) 7.0" />
+                <meta property="og:title" content="Sing Better Competition (SBC)" />
                 <meta property="og:description" content="Join now!" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://gelaspiration.com/src/assets/2.png" />
@@ -81,7 +81,7 @@ function Welcome() {
             </div>
             <div id="sbc">
                 <img src={require("../assets/singer.png")} id="sbc_img" alt="a_female_singer" />
-                <h1 className="sbc_text">Sing Better Competition (SBC) 7.0</h1>
+                <h1 className="sbc_text">Sing Better Competition (SBC)</h1>
             </div>
             <div id="about_us" className="animate">
                 <h2 id="about_header">About SBC</h2>
