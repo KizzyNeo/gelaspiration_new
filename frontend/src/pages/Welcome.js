@@ -181,7 +181,8 @@ function Welcome() {
                     <li>Semi-Final Stage</li>
                     <li>Final Stage</li>
                 </ul>
-                <h3 id="reg_fee">Registration Fee: &#8358;3,000</h3>
+                    { /*<h3 id="reg_fee">Registration Fee: &#8358;3,000</h3> */}
+                <h3 id="reg_fee">Registration Fee: Free</h3>
                 <div className="centralize">
                     <button className="btn-two" onClick={() => navigate("/register")}>
                     {/* <button className="btn-two" onClick={() => alert("Starting Soon...")}> */}
