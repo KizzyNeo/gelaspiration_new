@@ -37,7 +37,8 @@ function Register() {
             const res = await axios.post("https://api.gelaspiration.com/api/contestants", data);
             console.log(res.data);
             alert("Registration Successful!");
-            window.location.href="https://chat.whatsapp.com/BnaSadlSdVd0tk0SAwj4pM?mode=gi_t";
+            window.location.href="https://chat.whatsapp.com/BnaSadISdVd0tk0SAwj4pM?mode=gi_t";
+            formData.reset();
         } catch (err) {
             console.error(err);
             alert("Registration failed. Please try again.");
