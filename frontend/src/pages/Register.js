@@ -38,7 +38,6 @@ function Register() {
             console.log(res.data);
             alert("Registration Successful!");
             window.location.href="https://chat.whatsapp.com/BnaSadISdVd0tk0SAwj4pM?mode=gi_t";
-            formData.reset();
         } catch (err) {
             console.error(err);
             alert("Registration failed. Please try again.");
