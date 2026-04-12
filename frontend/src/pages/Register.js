@@ -36,8 +36,8 @@ function Register() {
         try {
             const res = await axios.post("https://api.gelaspiration.com/api/contestants", data);
             console.log(res.data);
-            alert("Registration successful! We'll get back to you.");
-            window.location.href = "/";
+            alert("Registration Successful!");
+            window.location.href="https://chat.whatsapp.com/BnaSadlSdVd0tk0SAwj4pM?mode=gi_t";
         } catch (err) {
             console.error(err);
             alert("Registration failed. Please try again.");
@@ -66,16 +66,6 @@ function Register() {
                             <meta name="twitter:card" content="summary_large_image" />
                         </Helmet>
             <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
-            <div id="instruction">
-                <h3 id="info2">Note:</h3>
-                <p>
-                    Before you fill in your details, ensure to send the sum of &#8358;3,000 only to:<br />
-                    Account Number: 6118248880<br />
-                    Bank: Opay<br />
-                    Account Name: Angela Chiamaka Emejuru<br /><br />
-                    Send your payment receipt to us on WhatsApp <img src={require("../assets/whatsapp.png")} id="whatsapp2" alt="whatsapp_icon" onClick={() => {window.location.href="https://wa.me/+2348123407932"}} />
-                </p>
-            </div>
             <h2 id="reg">Register for SBC 7.0</h2>
             <form onSubmit={handleSubmit} className="form">
                 <input type="text" name="name" placeholder="Full Name" onChange={handleChange} required />
