@@ -7,6 +7,7 @@ function Login() {
     const currentYear = new Date().getFullYear();
 
     const handleLogin = async () => {
+        e.preventDefault();
         setLoading(true);
         try {
             const res = await axios.post("https://api.gelaspiration.com/api/auth/login", form);
