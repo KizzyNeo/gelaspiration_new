@@ -6,7 +6,7 @@ function Login() {
     const [loading, setLoading] = useState(false);
     const currentYear = new Date().getFullYear();
 
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
         try {
