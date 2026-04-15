@@ -87,6 +87,8 @@ table {
     margin-left: 1%;
     font-weight: 900;
     position: absolute;
+    margin-top: 10%;
+    text-shadow: 5px 5px 5px #000;
 }
 #about_us {
     border-radius: 15px;
