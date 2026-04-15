@@ -199,13 +199,13 @@ function Welcome() {
             </div>
             <div id="pros">
                 <h2 id="pros_header">What SBC Holds for Participants</h2>
-                <h5>One Week of Intensive Training On:</h5>
+                <h5 className="sub_header">One Week of Intensive Training On:</h5>
                 <ul className="details">
                     <li>Audio Recording/Editing</li>
                     <li>Video Recording/Editing</li>
                     <li>Voice Training Session</li>
                 </ul>
-                <h4>Bonuses for Participants:</h4>
+                <h4 className="sub_header">Bonuses for Participants:</h4>
                 <ul className="details">
                     <li>Personalised Flyers Throughout the Stages</li>
                     <li>Certification for All Participants from Stage One to the Final</li>
