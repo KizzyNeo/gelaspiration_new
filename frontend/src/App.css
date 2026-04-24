@@ -592,7 +592,7 @@ td img {
     font-size: 3vw;
 }
 #main {
-    background-image: url(./assets/performer.png);
+    /* background-image: url(./assets/performer.png); */
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
