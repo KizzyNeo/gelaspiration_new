@@ -66,6 +66,15 @@ function Register() {
                             <meta name="twitter:card" content="summary_large_image" />
                         </Helmet>
             <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
+            <div id="instruction">
+                <h3 id="info2">Note:</h3>
+                <p id="info2_text">
+                    After entering your details, click on the "Submit" button, 
+                    wait for it to finish, leave your browser open and you will be REDIRECTED automatically to the official 
+                    WhatsApp group for the contest. Please follow the on-screen 
+                    instructions of your browser to join the WhatsApp group. Success!
+                </p>
+            </div>
             <h2 id="reg">Register for SBC 7.0</h2>
             <form onSubmit={handleSubmit} className="form">
                 <input type="text" name="name" placeholder="Full Name" onChange={handleChange} required />
