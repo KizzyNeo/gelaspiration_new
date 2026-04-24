@@ -56,32 +56,7 @@ table {
     height: 3%;
     display: flex;
     flex-direction: row;
-    /* float: left; */
 }
-
-/* .navigation { */
-    /* width: 90%; */
-    /* height: 50px; */
-    /* display: none; */
-/* } */
-/* .navigation2 {
-    width: 90%;
-    height: 50px;
-}
-
-.navigation2 ul {
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
-    margin: 20 0px;
-    padding: 0 25px;
-    
-}
-
-.navigation2 ul li {
-    list-style-type: none;
-    padding-right: 10px;
-} */
 .hamburger {
     width: 2rem;
     height: 2rem;
@@ -614,13 +589,8 @@ td img {
 #info2 {
     text-align: left;
     color: #aa0000;
-    /* padding-left: 2%; */
     font-size: 3vw;
 }
-/* #home {
-    margin-left: 2%;
-    margin-right: 2%;
-} */
 #main {
     background-image: url(./assets/performer.png);
     background-size: cover;
@@ -825,32 +795,9 @@ input, select {
 #info2 {
     text-align: left;
     color: #aa0000;
-    /* padding-left: 2%; */
     font-size: 2vw;
 }
 #info2_text {
     font-size: 2vw;
 }
-/* .navigation {
-    display: inline;
-} */
-/* .navigation { */
-    /* width: 90%; */
-    /* height: 50px; */
-    /* background-color: #000; */
-/* } */
-
-/* .navigation ul {
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
-    margin: 20 0px;
-    padding: 0 25px;
-    
-}
-
-.navigation ul li {
-    list-style-type: none;
-    padding-right: 10px;
-} */
 }
