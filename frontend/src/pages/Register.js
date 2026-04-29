@@ -66,7 +66,7 @@ function Register() {
                             <meta name="twitter:card" content="summary_large_image" />
                         </Helmet>
                         alert("Registration is closed.");
-    { /* <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
+    {/* <img src={require("../assets/logo.png")} alt="gelaspiration_logo" className="brown_logo" />
             <div id="instruction">
                 <h3 id="info2">Note:</h3>
                 <p id="info2_text">
@@ -133,7 +133,7 @@ function Register() {
                     </>
                 ) : ( "Submit" )}
                 </button>
-            </form> */ }
+            </form> */}
             <div className="general_footer">
                 <small>&copy; <span>{currentYear}</span> Sing Better Competition (SBC). All rights reserved.</small>
             </div>
