@@ -184,7 +184,7 @@ function Welcome() {
                     { /*<h3 id="reg_fee">Registration Fee: &#8358;3,000</h3> */}
                 <h3 id="reg_fee">Registration Fee: Free</h3>
                 <div className="centralize">
-                { /* <button className="btn-two" onClick={() => navigate("/register")}> */ }
+                {/* <button className="btn-two" onClick={() => navigate("/register")}> */}
                     <button className="btn-two" onClick={() => alert("Registration is closed.")}>
                     Register Now
                 </button>
@@ -213,7 +213,7 @@ function Welcome() {
                     <li>A Chance to Work with Gelaspiration Enterprise (for the Winners)</li>
                 </ul>
                 <div className="centralize space">
-                    { /* <button className="btn-two" onClick={() => navigate("/register")}> */ }
+                    {/* <button className="btn-two" onClick={() => navigate("/register")}> */}
                     <button className="btn-two" onClick={() => alert("Registration is closed.")}>
                     Register Now
                 </button>
