@@ -1,50 +1,50 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Helmet } from "react-helmet";
 
 function Register() {
-    const [formData, setFormData] = useState({
-        name: "",
-        phone: "",
-        gender: "",
-        location: "",
-        photo: null
-    });
+    // const [formData, setFormData] = useState({
+    //     name: "",
+    //     phone: "",
+    //     gender: "",
+    //     location: "",
+    //     photo: null
+    // });
 
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
     
-    const handleChange = (e) => {
-        if (e.target.name === "photo") {
-            setFormData({ ...formData, photo: e.target.files[0] });
-        } else {
-            setFormData({ ...formData, [e.target.name]: e.target.value });
-        }
-    };
+    // const handleChange = (e) => {
+    //     if (e.target.name === "photo") {
+    //         setFormData({ ...formData, photo: e.target.files[0] });
+    //     } else {
+    //         setFormData({ ...formData, [e.target.name]: e.target.value });
+    //     }
+    // };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        setLoading(true);
+    //     setLoading(true);
 
-        const data = new FormData();
-        data.append("name", formData.name);
-        data.append("phone", formData.phone);
-        data.append("gender", formData.gender);
-        data.append("location", formData.location);
-        data.append("photo", formData.photo);
+    //     const data = new FormData();
+    //     data.append("name", formData.name);
+    //     data.append("phone", formData.phone);
+    //     data.append("gender", formData.gender);
+    //     data.append("location", formData.location);
+    //     data.append("photo", formData.photo);
 
-        try {
-            const res = await axios.post("https://api.gelaspiration.com/api/contestants", data);
-            console.log(res.data);
-            // alert("Registration Successful!");
-            window.location.href="https://chat.whatsapp.com/BnaSadISdVd0tk0SAwj4pM?mode=gi_t";
-        } catch (err) {
-            console.error(err);
-            alert("Registration failed. Please try again.");
-        } finally {
-            setLoading(false);
-        }
-    };
+    //     try {
+    //         const res = await axios.post("https://api.gelaspiration.com/api/contestants", data);
+    //         console.log(res.data);
+    //         // alert("Registration Successful!");
+    //         window.location.href="https://chat.whatsapp.com/BnaSadISdVd0tk0SAwj4pM?mode=gi_t";
+    //     } catch (err) {
+    //         console.error(err);
+    //         alert("Registration failed. Please try again.");
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
 
     const currentYear = new Date().getFullYear();
 
